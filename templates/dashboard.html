@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}AdMetrics - Дашборд{% endblock %}
+{% block content %}
+<section class="dashboard">
+    <h1>Дашборд</h1>
+    <p class="period">Період: останні 30 днів</p>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="stat-value">{{ stats.витрати }}</span>
+            <span class="stat-label">Витрачено</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">{{ stats.покази }}</span>
+            <span class="stat-label">Покази</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">{{ stats.кліки }}</span>
+            <span class="stat-label">Кліки</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">{{ stats.конверсії }}</span>
+            <span class="stat-label">Конверсії</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">{{ stats.ctr }}</span>
+            <span class="stat-label">CTR</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value">{{ stats.cpc }}</span>
+            <span class="stat-label">CPC</span>
+        </div>
+    </div>
+</section>
+{% endblock %}

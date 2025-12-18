@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}AdMetrics - Звіти{% endblock %}
+{% block content %}
+<section class="reports">
+    <h1>Звіти</h1>
+    
+    <div class="report-list">
+        <div class="report-item">
+            <h3>📄 Щоденний звіт</h3>
+            <p>Детальна статистика за поточний день</p>
+            <span class="report-date">Оновлено: сьогодні</span>
+        </div>
+        <div class="report-item">
+            <h3>📄 Тижневий звіт</h3>
+            <p>Порівняння показників за тиждень</p>
+            <span class="report-date">Оновлено: 15.12.2024</span>
+        </div>
+        <div class="report-item">
+            <h3>📄 Місячний звіт</h3>
+            <p>Загальна аналітика за місяць</p>
+            <span class="report-date">Оновлено: 01.12.2024</span>
+        </div>
+        <div class="report-item">
+            <h3>📄 Звіт по ROI</h3>
+            <p>Аналіз повернення інвестицій</p>
+            <span class="report-date">Оновлено: 10.12.2024</span>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AdMetrics{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">AdMetrics</div>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Головна</a></li>
+            <li><a href="{{ url_for('dashboard') }}">Дашборд</a></li>
+            <li><a href="{{ url_for('campaigns') }}">Кампанії</a></li>
+            <li><a href="{{ url_for('reports') }}">Звіти</a></li>
+            <li><a href="{{ url_for('about') }}">Про сайт</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>© 2024 AdMetrics - Аналітика для Media Buyers</p>
+    </footer>
+</body>
+</html>

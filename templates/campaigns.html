@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}AdMetrics - Кампанії{% endblock %}
+{% block content %}
+<section class="campaigns">
+    <h1>Рекламні кампанії</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Назва</th>
+                <th>Статус</th>
+                <th>Бюджет</th>
+                <th>Витрачено</th>
+                <th>ROI</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for campaign in campaigns %}
+            <tr>
+                <td>{{ campaign.назва }}</td>
+                <td><span class="status status-{{ campaign.статус|lower }}">{{ campaign.статус }}</span></td>
+                <td>{{ campaign.бюджет }}</td>
+                <td>{{ campaign.витрачено }}</td>
+                <td class="roi-positive">{{ campaign.roi }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}
